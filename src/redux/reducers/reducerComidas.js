@@ -13,7 +13,6 @@ const INITIAL_STATE = {
 };
 
 const reducerComidas = (state = INITIAL_STATE, action) => {
-  console.log(action);
   switch (action.type) {
   case SET_COMIDAS:
     return { ...state, comidas: action.state, error: '' };
