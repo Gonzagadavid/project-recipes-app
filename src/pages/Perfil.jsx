@@ -1,7 +1,11 @@
 import React from 'react';
+import HeaderWithoutSearch from '../components/HeaderWithoutSearch';
 
 const Perfil = () => (
-  <h1>Perfil</h1>
+  <div>
+    <HeaderWithoutSearch title="Perfil" />
+  </div>
+
 );
 
 export default Perfil;

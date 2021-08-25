@@ -1,7 +1,11 @@
 import React from 'react';
+import HeaderWithoutSearch from '../components/HeaderWithoutSearch';
 
 const ReceitasFavoritas = () => (
-  <h1>ReceitasFavoritas</h1>
+  <div>
+    <HeaderWithoutSearch title="Receitas Favoritas" />
+  </div>
+
 );
 
 export default ReceitasFavoritas;

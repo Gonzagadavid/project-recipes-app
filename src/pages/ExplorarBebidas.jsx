@@ -1,11 +1,11 @@
 import React from 'react';
 import HeaderWithoutSearch from '../components/HeaderWithoutSearch';
 
-const Explore = () => (
+const ExplorarBebidas = () => (
   <div>
-    <HeaderWithoutSearch title="Explorar" />
+    <HeaderWithoutSearch title="Explorar Bebidas" />
   </div>
 
 );
 
-export default Explore;
+export default ExplorarBebidas;

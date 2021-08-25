@@ -1,7 +1,11 @@
 import React from 'react';
+import HeaderWithoutSearch from '../components/HeaderWithoutSearch';
 
 const ReceitasFeitas = () => (
-  <h1>ReceitasFeitas</h1>
+  <div>
+    <HeaderWithoutSearch title="Receitas Feitas" />
+  </div>
+
 );
 
 export default ReceitasFeitas;
