@@ -9,8 +9,10 @@ export const BEBIDAS_BY_NAME = (name) => (
 );
 
 export const BEBIDAS_BY_LETTER = (letter) => (
-  `https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${letter}`
+  `https://www.thecocktaildb.com/api/json/v1/1/search.php?f=${letter}`
 );
+
+export const BEBIDAS_BY_INGREDIENTS = (ingredient) => `https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=${ingredient}`;
 
 export const BEBIDAS_BY_CATEGORY = (category) => (
   `https://www.thecocktaildb.com/api/json/v1/1/filter.php?c=${category}`

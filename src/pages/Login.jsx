@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
-import Button from '../components/Forms/Button';
-import Input from '../components/Forms/Input';
+import { Input, Button } from '../components/Forms';
 import {
   actionEmail, actionTokenDrinks, actionTokenMeals,
 } from '../redux/actions/actionsUser';
@@ -19,8 +18,8 @@ const Login = () => {
     const regexpEmail = /\w+@\w+.com(.br)?/g;
     const verifyEmail = regexpEmail.test(email);
     const verifyPassword = password.length > min;
-    const verification = verifyEmail && verifyPassword;
-    setVerify(verification);
+    const verification = (verifyEmail && verifyPassword);
+    setVerify(!verification);
   }, [email, password]);
 
   const submitUser = () => {
@@ -50,7 +49,7 @@ const Login = () => {
       />
       <Link to="/comidas">
         <Button
-          disabled={ !verify }
+          disabled={ verify }
           text="Entrar"
           id="login-submit-btn"
           onClick={ submitUser }

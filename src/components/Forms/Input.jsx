@@ -1,7 +1,7 @@
-import { bool, func, number, oneOfType, string } from 'prop-types';
+import { func, number, oneOfType, string } from 'prop-types';
 import React from 'react';
 
-const Input = ({ labelText, id, name, type, onChange, onChecked, value }) => {
+const Input = ({ labelText, id, name, type, onChange, value }) => {
   const checkLabel = type === 'radio' || type === 'checkbox';
   return (
     <label htmlFor={ id }>
@@ -11,7 +11,6 @@ const Input = ({ labelText, id, name, type, onChange, onChecked, value }) => {
         name={ name }
         data-testid={ id }
         id={ id }
-        checked={ onChecked }
         onChange={ onChange }
         value={ value }
       />
@@ -20,18 +19,18 @@ const Input = ({ labelText, id, name, type, onChange, onChecked, value }) => {
   );
 };
 
+export default Input;
+
 Input.propTypes = {
   labelText: string.isRequired,
   id: string.isRequired,
   name: string,
   type: string.isRequired,
   onChange: func.isRequired,
-  onChecked: bool,
-  value: oneOfType([string, number]).isRequired,
+  value: oneOfType([string, number]),
 };
 
 Input.defaultProps = {
   name: '',
-  onChecked: false,
+  value: '',
 };
-export default Input;

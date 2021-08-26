@@ -15,6 +15,8 @@ const Select = ({ labelText, id, name, onChange, options }) => (
   </label>
 );
 
+export default Select;
+
 Select.propTypes = {
   labelText: string.isRequired,
   id: string.isRequired,
@@ -22,5 +24,3 @@ Select.propTypes = {
   onChange: func.isRequired,
   options: arrayOf(string).isRequired,
 };
-
-export default Select;

@@ -8,7 +8,6 @@ class localStorageMock {
   }
 
   setItem(key, item) {
-    console.log(key);
     this.storage[key] = JSON.parse(item);
   }
 }
