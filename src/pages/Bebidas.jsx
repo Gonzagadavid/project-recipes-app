@@ -1,5 +1,7 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import { Link } from 'react-router-dom';
+import CategoryButton from '../components/CategoryButton';
 import Header from '../components/Header';
 import RecipeCard from '../components/RecipeCard/RecipeCard';
 import { BEBIDAS_BY_NAME } from '../endPoints/bebidas';
@@ -9,7 +11,7 @@ import fetchBebidas from '../redux/fetchs/fetchsBebidas/fetchBebidas';
 const Bebidas = () => {
   const recipesBebidas = useSelector((state) => state.reducerBebidas.bebidas);
   const dispatch = useDispatch();
-  const limit = 11;
+  const limit = 12;
 
   useEffect(() => { dispatch(fetchBebidas(BEBIDAS_BY_NAME(''))); }, [dispatch]);
 
@@ -17,17 +19,20 @@ const Bebidas = () => {
   return (
     <div>
       <Header title="Bebidas" />
+      <CategoryButton />
       <div>
         {arrayLimit(recipesBebidas, 0, limit).map(({
-          strDrink, strDrinkThumb, strInstructions,
+          idDrink, strDrink, strDrinkThumb, strInstructions,
         }, index) => (
-          <RecipeCard
-            recipeName={ strDrink }
-            image={ strDrinkThumb }
-            recipeText={ strInstructions }
-            index={ index }
-            key={ index }
-          />
+          <Link to={ `/bebidas/${idDrink}` } key={ idDrink }>
+            <RecipeCard
+              recipeName={ strDrink }
+              image={ strDrinkThumb }
+              recipeText={ strInstructions }
+              index={ index }
+              key={ index }
+            />
+          </Link>
         ))}
       </div>
     </div>
