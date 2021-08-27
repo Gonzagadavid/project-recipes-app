@@ -1,14 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useLocation } from 'react-router-dom';
-import fetchStaticBebidas from '../redux/fetchs/fetchsBebidas/fetchStaticBebidas';
+import fetchStaticBebidas from '../../redux/fetchs/fetchsBebidas/fetchStaticBebidas';
 import { BEBIDAS_BY_CATEGORY,
-  BEBIDAS_BY_NAME, BEBIDAS_CATEGORIES } from '../endPoints/bebidas';
-import fetchStaticComida from '../redux/fetchs/fetchsComidas/fetchStaticComidas';
+  BEBIDAS_BY_NAME, BEBIDAS_CATEGORIES } from '../../endPoints/bebidas';
+import fetchStaticComida from '../../redux/fetchs/fetchsComidas/fetchStaticComidas';
 import { COMIDAS_BY_CATEGORY,
-  COMIDAS_BY_NAME, COMIDAS_CATEGORIES } from '../endPoints/comidas';
-import fetchBebidas from '../redux/fetchs/fetchsBebidas/fetchBebidas';
-import fetchComidas from '../redux/fetchs/fetchsComidas/fetchComidas';
+  COMIDAS_BY_NAME, COMIDAS_CATEGORIES } from '../../endPoints/comidas';
+import fetchBebidas from '../../redux/fetchs/fetchsBebidas/fetchBebidas';
+import fetchComidas from '../../redux/fetchs/fetchsComidas/fetchComidas';
 
 function CategoryButton() {
   const [toggle, setToggle] = useState('');

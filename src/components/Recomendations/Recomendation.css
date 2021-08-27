@@ -1,0 +1,12 @@
+.Recomendation {
+  display: flex;
+  flex-wrap: wrap;
+  height: 150px;
+  overflow: auto;
+  width: 300px;
+}
+
+.Recomendation img {
+  margin: 10px;
+  width: 100px;
+}

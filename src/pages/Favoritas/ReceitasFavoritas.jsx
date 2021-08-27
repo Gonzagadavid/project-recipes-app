@@ -1,5 +1,5 @@
 import React from 'react';
-import HeaderWithoutSearch from '../components/HeaderWithoutSearch';
+import HeaderWithoutSearch from '../../components/Header/HeaderWithoutSearch';
 
 const ReceitasFavoritas = () => (
   <div>

@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
-import { Input, Button } from '../components/Forms';
+import { Input, Button } from '../../components/Forms';
 import {
   actionEmail, actionTokenDrinks, actionTokenMeals,
-} from '../redux/actions/actionsUser';
-import setLocalStorage from '../services/localStorage/setLocalStorage';
+} from '../../redux/actions/actionsUser';
+import setLocalStorage from '../../services/localStorage/setLocalStorage';
 
 const Login = () => {
   const [email, setEmail] = useState('');

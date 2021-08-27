@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
-import SearchBar from './SearchBar/SearchBar';
-import ProfileIcon from '../images/profileIcon.svg';
-import SearchIcon from '../images/searchIcon.svg';
+import SearchBar from '../SearchBar/SearchBar';
+import ProfileIcon from '../../images/profileIcon.svg';
+import SearchIcon from '../../images/searchIcon.svg';
 
 function Header({ title }) {
   const [showSearchBar, setShowSearchBar] = useState(false);

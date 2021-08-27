@@ -1,13 +1,13 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
-import CategoryButton from '../components/CategoryButton';
-import Header from '../components/Header';
-import Footer from '../components/Footer/Footer';
-import RecipeCard from '../components/RecipeCard/RecipeCard';
-import { BEBIDAS_BY_NAME } from '../endPoints/bebidas';
-import { arrayLimit } from '../functions';
-import fetchBebidas from '../redux/fetchs/fetchsBebidas/fetchBebidas';
+import CategoryButton from '../../components/CategoryButton/CategoryButton';
+import Header from '../../components/Header/Header';
+import Footer from '../../components/Footer/Footer';
+import RecipeCard from '../../components/RecipeCard/RecipeCard';
+import { BEBIDAS_BY_NAME } from '../../endPoints/bebidas';
+import { arrayLimit } from '../../functions';
+import fetchBebidas from '../../redux/fetchs/fetchsBebidas/fetchBebidas';
 
 const Bebidas = () => {
   const recipesBebidas = useSelector((state) => state.reducerBebidas.bebidas);

@@ -1,0 +1,8 @@
+.Message {
+  background-color: rgba(255, 108, 145, 0.8);
+  color: rgb(112, 4, 18);
+  height: 50px;
+  padding: 20px;
+  position: fixed;
+  top: 0;
+}
