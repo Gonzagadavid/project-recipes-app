@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import CategoryButton from '../components/CategoryButton';
 import Header from '../components/Header';
+import Footer from '../components/Footer/Footer';
 import RecipeCard from '../components/RecipeCard/RecipeCard';
 import { COMIDAS_BY_NAME } from '../endPoints/comidas';
 import { arrayLimit } from '../functions';
@@ -35,6 +36,7 @@ const Comidas = () => {
           </Link>
         ))}
       </div>
+      <Footer />
     </div>
 
   );
