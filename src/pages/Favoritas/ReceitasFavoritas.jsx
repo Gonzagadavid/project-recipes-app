@@ -1,11 +1,72 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import FavoriteRecipeCard from '../../components/FavoriteRecipeCard/FavoriteRecipeCard';
 import HeaderWithoutSearch from '../../components/Header/HeaderWithoutSearch';
 
-const ReceitasFavoritas = () => (
-  <div>
-    <HeaderWithoutSearch title="Receitas Favoritas" />
-  </div>
+function ReceitasFavoritas() {
+  const [favoriteRecipe, setFavoriteRecipe] = useState([]);
 
-);
+  function getFavoriteRecipes() {
+    const recipes = JSON.parse(localStorage.getItem('favoriteRecipes'));
+    setFavoriteRecipe(recipes);
+  }
+
+  function filterByMeal() {
+    const recipes = JSON.parse(localStorage.getItem('favoriteRecipes'));
+    const favoriteMeal = recipes.filter((recipe) => recipe.type === 'comida');
+    setFavoriteRecipe(favoriteMeal);
+  }
+
+  function filterByDrink() {
+    const recipes = JSON.parse(localStorage.getItem('favoriteRecipes'));
+    const favoriteDrink = recipes.filter((recipe) => recipe.type === 'bebida');
+    setFavoriteRecipe(favoriteDrink);
+  }
+
+  function removeFavorite(id) {
+    const recipes = JSON.parse(localStorage.getItem('favoriteRecipes'));
+    const newFavRecipes = recipes.filter((recipe) => recipe.id !== id);
+    localStorage.setItem('favoriteRecipes', JSON.stringify(newFavRecipes));
+    setFavoriteRecipe(newFavRecipes);
+  }
+
+  useEffect(() => {
+    getFavoriteRecipes();
+  }, []);
+
+  return (
+    <div>
+      <HeaderWithoutSearch title="Receitas Favoritas" />
+      <button
+        type="button"
+        data-testid="filter-by-all-btn"
+        onClick={ getFavoriteRecipes }
+      >
+        All
+      </button>
+      <button
+        type="button"
+        data-testid="filter-by-food-btn"
+        onClick={ filterByMeal }
+      >
+        Food
+      </button>
+      <button
+        type="button"
+        data-testid="filter-by-drink-btn"
+        onClick={ filterByDrink }
+      >
+        Drink
+      </button>
+      { favoriteRecipe && favoriteRecipe.map((recipe, index) => (
+        <FavoriteRecipeCard
+          key={ index }
+          index={ index }
+          recipe={ recipe }
+          removeFavorite={ removeFavorite }
+        />
+      )) }
+    </div>
+  );
+}
 
 export default ReceitasFavoritas;
