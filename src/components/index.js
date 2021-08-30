@@ -11,9 +11,10 @@ import Recomendations from './Recomendations/Recomendations';
 import SearchBar from './SearchBar/SearchBar';
 import ShareButton from './ShareButton/ShareButton';
 import Video from './Video/Video';
+import CardReceitasFeitas from './Cards/CardReceitasFeitas';
 
 export {
   ButtonRedirect, Video, IngredientsList, Recomendations, CategoryButton,
   FavoriteButton, Footer, Header, HeaderWithoutSearch, Message, RecipeCard,
-  SearchBar, ShareButton,
+  SearchBar, ShareButton, CardReceitasFeitas,
 };
