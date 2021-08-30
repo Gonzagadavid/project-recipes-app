@@ -19,6 +19,10 @@ export default RecipeCard;
 RecipeCard.propTypes = {
   recipeName: string.isRequired,
   image: string.isRequired,
-  recipeText: string.isRequired,
+  recipeText: string,
   index: number.isRequired,
+};
+
+RecipeCard.defaultProps = {
+  recipeText: '',
 };

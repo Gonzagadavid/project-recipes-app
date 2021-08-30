@@ -20,13 +20,13 @@ const SearchBar = () => {
 
   useEffect(() => {
     const [one] = recipesBebidas;
-    if (recipesBebidas.length === 1) history.push(`${pathname}/${one.idDrink}`);
-  }, [recipesBebidas, pathname, history]);
+    if (recipesBebidas.length === 1) history.push(`bebidas/${one.idDrink}`);
+  }, [recipesBebidas, history]);
 
   useEffect(() => {
     const [one] = recipesComidas;
-    if (recipesComidas.length === 1) history.push(`${pathname}/${one.idMeal}`);
-  }, [recipesComidas, pathname, history]);
+    if (recipesComidas.length === 1) history.push(`comidas/${one.idMeal}`);
+  }, [recipesComidas, history]);
 
   const getMeals = () => {
     if (checkOneLetter(filter, search)) return global.alert(ONE_LETTER);
@@ -59,7 +59,6 @@ const SearchBar = () => {
         text="Buscar"
         id="exec-search-btn"
         onClick={ getMeals }
-        disabled={ !filter }
       />
     </div>
   );
