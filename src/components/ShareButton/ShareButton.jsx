@@ -1,15 +1,12 @@
 import React from 'react';
-import { useLocation } from 'react-router';
 import copy from 'clipboard-copy';
-import { func } from 'prop-types';
+import { func, string } from 'prop-types';
 import shareIcon from '../../images/shareIcon.svg';
 
-const ShareButton = ({ setCopied }) => {
-  const { pathname } = useLocation();
-
+const ShareButton = ({ setCopied, id, ext }) => {
   const copyClipBoard = () => {
     const time = 3000;
-    copy(`http://localhost:3000${pathname}`);
+    copy(`http://localhost:3000${ext}`);
     setCopied(true);
     setTimeout(() => {
       setCopied(false);
@@ -18,7 +15,7 @@ const ShareButton = ({ setCopied }) => {
 
   return (
     <button type="button" onClick={ copyClipBoard }>
-      <img src={ shareIcon } data-testid="share-btn" alt="share icon" />
+      <img src={ shareIcon } data-testid={ id } alt="share icon" />
     </button>
   );
 };
@@ -27,4 +24,6 @@ export default ShareButton;
 
 ShareButton.propTypes = {
   setCopied: func.isRequired,
+  id: string.isRequired,
+  ext: string.isRequired,
 };

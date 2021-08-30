@@ -1,8 +1,9 @@
 import React from 'react';
+import RecipeMain from '../../components/Details/RecipeMain';
 
-const ProcessoComidas = () => (
+const ProcessoComidas = (props) => (
   <div>
-    Processo Comidas
+    <RecipeMain { ...props } />
   </div>
 
 );

@@ -34,14 +34,17 @@ const DetalhesComidas = ({ match }) => {
   const {
     strMealThumb, strMeal, strCategory, strInstructions, strYoutube, strArea,
   } = receita;
-
   return (
     <div>
       {copied && <Message msg={ COPIED } />}
       <h2 data-testid="recipe-title">{strMeal}</h2>
       <p data-testid="recipe-category">{strCategory}</p>
       <img src={ strMealThumb } data-testid="recipe-photo" alt={ strMeal } />
-      <ShareButton setCopied={ setCopied } />
+      <ShareButton
+        ext={ `/comidas/${id}` }
+        id="share-btn"
+        setCopied={ setCopied }
+      />
       <FavoriteButton
         idRecipe={ id }
         type="comida"

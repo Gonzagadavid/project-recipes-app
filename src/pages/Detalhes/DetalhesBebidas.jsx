@@ -38,7 +38,11 @@ const DetalhesBebidas = ({ match }) => {
       <h2 data-testid="recipe-title">{strDrink}</h2>
       <p data-testid="recipe-category">{strAlcoholic}</p>
       <img src={ strDrinkThumb } data-testid="recipe-photo" alt={ strDrink } />
-      <ShareButton setCopied={ setCopied } />
+      <ShareButton
+        ext={ `/bebidas/${id}` }
+        id="share-btn"
+        setCopied={ setCopied }
+      />
       <FavoriteButton
         idRecipe={ id }
         type="bebida"
