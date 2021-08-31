@@ -3,8 +3,7 @@ import React from 'react';
 import Bebidas from '../../pages/Principal/Bebidas';
 import Comidas from '../../pages/Principal/Comidas';
 import renderWithRouterAndRedux from '../helpers/renderWithRouterAndRedux';
-import fetchMock from '../mocks/fecthMock';
-import {
+import fetchMock, {
   mealCategories, drinkCategories, chickenMeals, cocktailDrinks, meals, drinks,
   oneDrink, oneMeal,
 } from '../mocks/respMoks';

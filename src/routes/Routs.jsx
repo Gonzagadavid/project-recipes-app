@@ -8,6 +8,7 @@ import {
   ExplorarIngredientesComidas, ExplorarIngredientesBebidas,
   DetalhesComidas, DetalhesBebidas,
 } from '../pages';
+import NotFound from '../pages/NotFound/NotFound';
 
 const Routs = () => (
   <Switch>
@@ -35,6 +36,7 @@ const Routs = () => (
     <Route exact path="/bebidas/:id/in-progress" component={ ProcessoBebidas } />
     <Route exact path="/receitas-feitas" component={ ReceitasFeitas } />
     <Route exact path="/receitas-favoritas" component={ ReceitasFavoritas } />
+    <Route path="*" component={ NotFound } />
   </Switch>
 );
 
