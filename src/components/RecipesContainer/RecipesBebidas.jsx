@@ -12,7 +12,10 @@ const RecipesBebidas = () => {
   const dispatch = useDispatch();
   const limit = 12;
 
-  useEffect(() => { dispatch(fetchBebidas(BEBIDAS_BY_NAME(''))); }, [dispatch]);
+  useEffect(() => {
+    if (recipesBebidas.length) return;
+    dispatch(fetchBebidas(BEBIDAS_BY_NAME('')));
+  }, [dispatch, recipesBebidas]);
 
   if (!recipesBebidas.length) return <p>Loading...</p>;
   return (
@@ -26,6 +29,7 @@ const RecipesBebidas = () => {
             image={ strDrinkThumb }
             index={ index }
             key={ index }
+            page="recipe"
           />
         </Link>
       ))}
