@@ -1,8 +1,8 @@
-import { bool, string } from 'prop-types';
+import { bool, func, string } from 'prop-types';
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const ButtonRedirect = ({ to, btnText, id, disabled }) => (
+const ButtonRedirect = ({ to, btnText, id, disabled, onClick }) => (
   <Link to={ to }>
     <button
       type="button"
@@ -10,6 +10,7 @@ const ButtonRedirect = ({ to, btnText, id, disabled }) => (
       id={ id }
       className="btn-redirect"
       disabled={ disabled }
+      onClick={ onClick }
     >
       {btnText}
     </button>
@@ -26,5 +27,6 @@ ButtonRedirect.propTypes = {
   to: string.isRequired,
   btnText: string.isRequired,
   id: string.isRequired,
+  onClick: func.isRequired,
   disabled: bool,
 };

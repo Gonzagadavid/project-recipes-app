@@ -10,6 +10,8 @@ import CheckList from './CheckList';
 import FavoriteButton from '../FavoriteButton/FavoriteButton';
 import ShareButton from '../ShareButton/ShareButton';
 import ButtonRedirect from '../ButtonRedirect/ButtonRedirect';
+import addItemArrayLocalStorage
+  from '../../services/localStorage/addItemArrayLocalStorage';
 
 function RecipeMain({ match }) {
   const { params: { id } } = match;
@@ -27,6 +29,21 @@ function RecipeMain({ match }) {
   useEffect(() => {
     dispatch(fetchRequest(id));
   }, [fetchRequest, dispatch, id]);
+
+  const handlerClick = () => {
+    const saveDone = {
+      id,
+      type: type ? 'bebida' : 'comida',
+      area: recipe.strArea || '',
+      category: recipe.strCategory,
+      alcoholicOrNot: recipe.strAlcoholic || '',
+      name: recipe[`str${tipo}`],
+      image: recipe[`str${tipo}Thumb`],
+      doneDate: Date.now(),
+      tags: recipe.strTags ? recipe.strTags.split(',') : [],
+    };
+    addItemArrayLocalStorage('doneRecipes', saveDone);
+  };
 
   return (
     <div>
@@ -72,6 +89,7 @@ function RecipeMain({ match }) {
         id="finish-recipe-btn"
         data-testid={ id }
         disabled={ !finish }
+        onClick={ handlerClick }
       />
     </div>
   );
