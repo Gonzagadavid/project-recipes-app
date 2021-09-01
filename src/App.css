@@ -66,3 +66,20 @@
     transform: rotate(-10deg);
   }
 }
+
+.App {
+  background-color: #f0f7ef;
+  height: 100vh;
+  width: 100vw;
+
+}
+
+@font-face {
+  font-family: holiday;
+  src: url('./fonts/bright_holiday/Brightholiday.ttf');
+}
+
+@font-face {
+  font-family: ohmyway;
+  src: url('./fonts/on_my_way/On\ My\ Way\ Free\ Version.ttf');
+}
