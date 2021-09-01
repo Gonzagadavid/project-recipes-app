@@ -12,9 +12,17 @@ import SearchBar from './SearchBar/SearchBar';
 import ShareButton from './ShareButton/ShareButton';
 import Video from './Video/Video';
 import CardReceitasFeitas from './Cards/CardReceitasFeitas';
+import IngredientesComidas from './IngredientsContainer/IngredientesComidas';
+import IngredientesBebidas from './IngredientsContainer/IngredientesBebidas';
+import SelectAreas from './SelectAreas/SelectAreas';
+import RecipesComidas from './RecipesContainer/RecipesComidas';
+import { Button, Input } from './Forms';
+import FavoriteRecipeCard from './FavoriteRecipeCard/FavoriteRecipeCard';
+import RecipesBebidas from './RecipesContainer/RecipesBebidas';
 
 export {
   ButtonRedirect, Video, IngredientsList, Recomendations, CategoryButton,
   FavoriteButton, Footer, Header, HeaderWithoutSearch, Message, RecipeCard,
-  SearchBar, ShareButton, CardReceitasFeitas,
+  SearchBar, ShareButton, CardReceitasFeitas, IngredientesComidas, IngredientesBebidas,
+  SelectAreas, RecipesComidas, Button, FavoriteRecipeCard, Input, RecipesBebidas,
 };

@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { Link } from 'react-router-dom';
-import { Input, Button } from '../../components/Forms';
+import { Input, ButtonRedirect } from '../../components';
 import {
   actionEmail, actionTokenDrinks, actionTokenMeals,
 } from '../../redux/actions/actionsUser';
 import setLocalStorage from '../../services/localStorage/setLocalStorage';
+import './Login.css';
 
 const Login = () => {
   const [email, setEmail] = useState('');
@@ -32,7 +32,7 @@ const Login = () => {
   };
 
   return (
-    <form>
+    <form className="Login">
       <Input
         labelText="Email:"
         id="email-input"
@@ -47,14 +47,13 @@ const Login = () => {
         onChange={ ({ target: { value } }) => setPassWord(value) }
         value={ password }
       />
-      <Link to="/comidas">
-        <Button
-          disabled={ verify }
-          text="Entrar"
-          id="login-submit-btn"
-          onClick={ submitUser }
-        />
-      </Link>
+      <ButtonRedirect
+        to="/comidas"
+        btnText="Entrar"
+        id="login-submit-btn"
+        disabled={ verify }
+        onClick={ submitUser }
+      />
     </form>
   );
 };

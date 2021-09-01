@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link, useHistory } from 'react-router-dom';
-import HeaderWithoutSearch from '../../components/Header/HeaderWithoutSearch';
-import Footer from '../../components/Footer/Footer';
+import { HeaderWithoutSearch, Footer } from '../../components';
 import { COMIDAS_RAMDOM } from '../../endPoints/comidas';
 import fetchApi from '../../services/fetchApi';
 
@@ -31,7 +30,6 @@ function ExplorarComidas() {
           Por Local de Origem
         </button>
       </Link>
-      {/* <Link to={ `/comidas/${id}` }> */}
       <button
         type="button"
         data-testid="explore-surprise"
@@ -39,7 +37,6 @@ function ExplorarComidas() {
       >
         Me Surpreenda!
       </button>
-      {/* </Link> */}
       <Footer />
     </div>
   );

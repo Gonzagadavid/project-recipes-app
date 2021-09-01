@@ -5,7 +5,7 @@ import {
   IngredientsList, Recomendations, ButtonRedirect, FavoriteButton, Message,
   ShareButton, Video,
 } from '../../components';
-import { COPIED } from '../../constants/messages';
+import { INITIAL_PROGRESS_RECIPE, COPIED } from '../../constants';
 import fetchComidasId from '../../redux/fetchs/fetchsComidas/fetchComidasId';
 import getLocalStorage from '../../services/localStorage/getLocalStorage';
 import './Detalhes.css';
@@ -15,7 +15,8 @@ const DetalhesComidas = ({ match }) => {
   const dispatch = useDispatch();
   const receita = useSelector((state) => state.reducerComidas.receita);
   const loading = !Object.keys(receita).length;
-  const recipesInProgress = getLocalStorage('inProgressRecipes') || { meals: {} };
+  const recipesInProgress = getLocalStorage('inProgressRecipes')
+  || INITIAL_PROGRESS_RECIPE;
   const inProgress = Object.keys(recipesInProgress.meals).includes(id);
   const btnText = inProgress ? 'Continuar Receita' : 'Iniciar Receita';
   const doneRecipesIds = getLocalStorage('doneRecipes') || [];

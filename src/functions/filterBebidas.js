@@ -1,4 +1,4 @@
-import { FIRST_LETTER, INGREDIENTS, NAME } from '../constants/filters';
+import { FIRST_LETTER, INGREDIENTS, NAME } from '../constants';
 import {
   BEBIDAS_BY_INGREDIENTS, BEBIDAS_BY_LETTER, BEBIDAS_BY_NAME,
 } from '../endPoints/bebidas';

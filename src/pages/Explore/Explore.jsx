@@ -1,8 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import HeaderWithoutSearch from '../../components/Header/HeaderWithoutSearch';
-import { Button } from '../../components/Forms';
-import Footer from '../../components/Footer/Footer';
+import { Button, HeaderWithoutSearch, Footer } from '../../components';
 
 const Explore = () => (
   <div>

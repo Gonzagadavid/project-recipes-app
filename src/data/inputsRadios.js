@@ -1,4 +1,4 @@
-import { FIRST_LETTER, INGREDIENTS, NAME } from '../constants/filters';
+import { FIRST_LETTER, INGREDIENTS, NAME } from '../constants';
 
 const inputsRadios = [
   {

@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link, useHistory } from 'react-router-dom';
-import HeaderWithoutSearch from '../../components/Header/HeaderWithoutSearch';
-import Footer from '../../components/Footer/Footer';
+import { HeaderWithoutSearch, Footer } from '../../components';
 import { BEBIDAS_RANDOM } from '../../endPoints/bebidas';
 import fetchApi from '../../services/fetchApi';
 
@@ -23,7 +22,6 @@ const ExplorarBebidas = () => {
           Por Ingredientes
         </button>
       </Link>
-      {/* <Link to="/explorar/bebidas/ingredient"> */}
       <button
         type="button"
         data-testid="explore-surprise"
@@ -31,7 +29,6 @@ const ExplorarBebidas = () => {
       >
         Me Surpreenda!
       </button>
-      {/* </Link> */}
       <Footer />
     </div>);
 };

@@ -1,8 +1,6 @@
 import React, { useEffect, useState, useCallback } from 'react';
 import { useDispatch } from 'react-redux';
-import { Header, Footer } from '../../components';
-import RecipesComidas from '../../components/RecipesContainer/RecipesComidas';
-import SelectAreas from '../../components/SelectAreas/SelectAreas';
+import { Header, Footer, SelectAreas, RecipesComidas } from '../../components';
 import { COMIDAS_BY_AREA, COMIDAS_BY_NAME } from '../../endPoints/comidas';
 import fetchComidas from '../../redux/fetchs/fetchsComidas/fetchComidas';
 

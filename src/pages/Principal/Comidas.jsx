@@ -1,8 +1,6 @@
 import React from 'react';
 import CategoryButton from '../../components/CategoryButton/CategoryButton';
-import Header from '../../components/Header/Header';
-import Footer from '../../components/Footer/Footer';
-import RecipesComidas from '../../components/RecipesContainer/RecipesComidas';
+import { RecipesComidas, Header, Footer } from '../../components';
 
 const Comidas = () => (
   <div>

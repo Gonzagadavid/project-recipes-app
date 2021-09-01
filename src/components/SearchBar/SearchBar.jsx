@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useHistory, useLocation } from 'react-router-dom';
-import { ONE_LETTER } from '../../constants/messages';
+import { ONE_LETTER } from '../../constants';
 import inputsRadios from '../../data/inputsRadios';
 import { checkOneLetter, filterBebidas, filterComidas } from '../../functions';
 import fetchBebidas from '../../redux/fetchs/fetchsBebidas/fetchBebidas';

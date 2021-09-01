@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import ShareButton from '../ShareButton/ShareButton';
 import blackHeartIcon from '../../images/blackHeartIcon.svg';
-import { COPIED } from '../../constants/messages';
+import { COPIED } from '../../constants';
 import './FavoriteRecipeCard.css';
 import Message from '../Message/Message';
 

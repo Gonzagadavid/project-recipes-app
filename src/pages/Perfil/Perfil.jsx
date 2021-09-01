@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useHistory, Link } from 'react-router-dom';
-import HeaderWithoutSearch from '../../components/Header/HeaderWithoutSearch';
-import Footer from '../../components/Footer/Footer';
+import { Footer, HeaderWithoutSearch } from '../../components';
 import getLocalStorage from '../../services/localStorage/getLocalStorage';
 
 function Perfil() {

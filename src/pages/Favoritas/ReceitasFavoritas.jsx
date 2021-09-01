@@ -1,29 +1,29 @@
 import React, { useEffect, useState } from 'react';
-import FavoriteRecipeCard from '../../components/FavoriteRecipeCard/FavoriteRecipeCard';
-import HeaderWithoutSearch from '../../components/Header/HeaderWithoutSearch';
+import { FavoriteRecipeCard, HeaderWithoutSearch } from '../../components';
+import getLocalStorage from '../../services/localStorage/getLocalStorage';
 
 function ReceitasFavoritas() {
   const [favoriteRecipe, setFavoriteRecipe] = useState([]);
 
   function getFavoriteRecipes() {
-    const recipes = JSON.parse(localStorage.getItem('favoriteRecipes'));
+    const recipes = getLocalStorage('favoriteRecipes');
     setFavoriteRecipe(recipes);
   }
 
   function filterByMeal() {
-    const recipes = JSON.parse(localStorage.getItem('favoriteRecipes'));
+    const recipes = getLocalStorage('favoriteRecipes');
     const favoriteMeal = recipes.filter((recipe) => recipe.type === 'comida');
     setFavoriteRecipe(favoriteMeal);
   }
 
   function filterByDrink() {
-    const recipes = JSON.parse(localStorage.getItem('favoriteRecipes'));
+    const recipes = getLocalStorage('favoriteRecipes');
     const favoriteDrink = recipes.filter((recipe) => recipe.type === 'bebida');
     setFavoriteRecipe(favoriteDrink);
   }
 
   function removeFavorite(id) {
-    const recipes = JSON.parse(localStorage.getItem('favoriteRecipes'));
+    const recipes = getLocalStorage('favoriteRecipes');
     const newFavRecipes = recipes.filter((recipe) => recipe.id !== id);
     localStorage.setItem('favoriteRecipes', JSON.stringify(newFavRecipes));
     setFavoriteRecipe(newFavRecipes);

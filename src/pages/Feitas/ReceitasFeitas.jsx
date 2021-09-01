@@ -1,23 +1,23 @@
 import React, { useEffect, useState } from 'react';
-import HeaderWithoutSearch from '../../components/Header/HeaderWithoutSearch';
-import CardReceitasFeitas from '../../components/Cards/CardReceitasFeitas';
+import { HeaderWithoutSearch, CardReceitasFeitas } from '../../components';
+import getLocalStorage from '../../services/localStorage/getLocalStorage';
 
 function ReceitasFeitas() {
   const [doneRecipes, setDoneRecipe] = useState([]);
 
   function getRecipeDone() {
-    const recipe = JSON.parse(localStorage.getItem('doneRecipes')) || [];
+    const recipe = getLocalStorage('doneRecipes') || [];
     setDoneRecipe(recipe);
   }
 
   function filterByMeal() {
-    const recipes = JSON.parse(localStorage.getItem('doneRecipes')) || [];
+    const recipes = getLocalStorage('doneRecipes') || [];
     const typeMeal = recipes.filter((recipe) => recipe.type === 'comida');
     setDoneRecipe(typeMeal);
   }
 
   function filterByDrink() {
-    const recipes = JSON.parse(localStorage.getItem('doneRecipes')) || [];
+    const recipes = getLocalStorage('doneRecipes') || [];
     const typeDrink = recipes.filter((recipe) => recipe.type === 'bebida');
     setDoneRecipe(typeDrink);
   }

@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useLocation } from 'react-router-dom';
 import { shape, string } from 'prop-types';
-import { COPIED } from '../../constants/messages';
+import { COPIED } from '../../constants';
 import fetchBebidasId from '../../redux/fetchs/fetchsBebidas/fetchBebidasId';
 import fetchComidasId from '../../redux/fetchs/fetchsComidas/fetchComidasId';
 import Message from '../Message/Message';
@@ -53,14 +53,11 @@ function RecipeMain({ match }) {
         alt="Prato do dia"
         data-testid="recipe-photo"
       />
-      <h1
-        data-testid="recipe-title"
-      >
+      <h1 data-testid="recipe-title">
         { recipe[`str${tipo}`] }
       </h1>
       <span data-testid="recipe-category">{ recipe.strCategory}</span>
       <div>
-        {/* <ShareButton setCopied={ setCopied } /> */}
         <ShareButton
           ext={ `/${type ? 'bebidas' : 'comidas'}/${id}` }
           id="share-btn"

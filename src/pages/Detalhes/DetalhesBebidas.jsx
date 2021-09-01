@@ -7,14 +7,15 @@ import {
 import fetchBebidasId from '../../redux/fetchs/fetchsBebidas/fetchBebidasId';
 import './Detalhes.css';
 import getLocalStorage from '../../services/localStorage/getLocalStorage';
-import { COPIED } from '../../constants/messages';
+import { COPIED, INITIAL_PROGRESS_RECIPE } from '../../constants';
 
 const DetalhesBebidas = ({ match }) => {
   const { params: { id } } = match;
   const dispatch = useDispatch();
   const receita = useSelector((state) => state.reducerBebidas.bebida);
   const loading = !Object.keys(receita).length;
-  const recipesInProgress = getLocalStorage('inProgressRecipes') || { cocktails: {} };
+  const recipesInProgress = getLocalStorage('inProgressRecipes')
+  || INITIAL_PROGRESS_RECIPE;
   const inProgress = Object.keys(recipesInProgress.cocktails).includes(id);
   const btnText = inProgress ? 'Continuar Receita' : 'Iniciar Receita';
   const doneRecipesIds = (getLocalStorage('doneRecipes') || []);

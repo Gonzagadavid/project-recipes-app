@@ -1,4 +1,4 @@
-import { N_FOUND } from '../../../constants/messages';
+import { N_FOUND } from '../../../constants';
 import fetchApi from '../../../services/fetchApi';
 import { actionErrorComidas, actionSetComidas } from '../../actions/actionsComidas';
 
