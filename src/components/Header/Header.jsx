@@ -10,7 +10,7 @@ function Header({ title }) {
 
   return (
     <header>
-      <HeaderWithoutSearch />
+      <HeaderWithoutSearch title={ title } />
       <button type="button" onClick={ displaySearchBar }>
         <img
           data-testid="search-top-btn"
@@ -18,7 +18,6 @@ function Header({ title }) {
           alt="Ícone de buscar receita"
         />
       </button>
-      <h1 data-testid="page-title">{ title }</h1>
       { showSearchBar ? <SearchBar /> : '' }
     </header>
   );

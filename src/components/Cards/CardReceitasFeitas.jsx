@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import ShareButton from '../ShareButton/ShareButton';
-import shareIcon from '../../images/shareIcon.svg';
 import { COPIED } from '../../constants';
 import './CardReceitasFeitas.css';
 import Message from '../Message/Message';
@@ -48,7 +47,6 @@ function CardReceitasFeitas({ index, recipe }) {
           id={ `${index}-horizontal-share-btn` }
         />
         { clipboard && <Message msg={ COPIED } /> }
-        <img src={ shareIcon } alt="compartilhar" />
         {recipe.tags.map((tagName, i) => (
           <p
             key={ i }
