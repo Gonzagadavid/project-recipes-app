@@ -12,8 +12,7 @@ function Header({ title }) {
   return (
     <div>
       <header className="header">
-        <HeaderWithoutSearch />
-        <h1 data-testid="page-title">{ title }</h1>
+        <HeaderWithoutSearch title={ title } />
         <button type="button" onClick={ displaySearchBar }>
           <img
             data-testid="search-top-btn"

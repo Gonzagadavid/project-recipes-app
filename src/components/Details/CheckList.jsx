@@ -1,6 +1,7 @@
 import { func, number, string } from 'prop-types';
 import React, { useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
+import { INITIAL_PROGRESS_RECIPE } from '../../constants';
 import arrayValues from '../../functions/arrayValues';
 import getLocalStorage from '../../services/localStorage/getLocalStorage';
 import setLocalStorage from '../../services/localStorage/setLocalStorage';
@@ -10,7 +11,8 @@ function CheckList(props) {
   const { pathname } = useLocation();
   const bebida = /bebida/g.test(pathname);
   const key = bebida ? 'cocktails' : 'meals';
-  const inProgressRecipes = getLocalStorage('inProgressRecipes') || { [key]: {} };
+  const inProgressRecipes = getLocalStorage('inProgressRecipes')
+  || INITIAL_PROGRESS_RECIPE;
   const list = arrayValues(recipesFavorite, 'strIngredient');
   const sizeList = arrayValues(recipesFavorite, 'strMeasure');
   const listProgressIniti = inProgressRecipes[key][id] || [];
