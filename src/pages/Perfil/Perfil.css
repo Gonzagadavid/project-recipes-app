@@ -23,12 +23,11 @@
     color: #3a6ea5 ;
     min-width: 80px;
     font-size: 20px;
-    margin: 10px;
+    margin: 10px 0;
     padding: 5px;
 }
 
 .Perfil .button-container button {
-    flex-grow: 1;
     border: solid 0.5px #ee7505;
     color: #ee7505;
 }
