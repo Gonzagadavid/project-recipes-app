@@ -40,7 +40,7 @@ function CategoryButton() {
   return (
     <div className="CategoryContainer">
       <button
-        className="categoryButtonAll"
+        className="categoryButton"
         type="button"
         data-testid="All-category-filter"
         onClick={ () => categoryAll() }
@@ -49,22 +49,16 @@ function CategoryButton() {
       </button>
       {category.length > 0 && category.map(({ strCategory }, index) => (
         index < FIVE && (
-          <label
-            className="CategoryContainer"
-            htmlFor={ `${strCategory}${index}` }
-            key={ index }
+          <button
+            className="categoryButton"
+            type="button"
+            data-testid={ `${strCategory}-category-filter` }
+            name={ strCategory }
+            onClick={ () => (
+              strCategory === toggle ? categoryAll() : setToggle(strCategory)) }
           >
-            <button
-              className="categoryButton"
-              type="button"
-              data-testid={ `${strCategory}-category-filter` }
-              name={ strCategory }
-              onClick={ () => (
-                strCategory === toggle ? categoryAll() : setToggle(strCategory)) }
-            >
-              { strCategory }
-            </button>
-          </label>
+            { strCategory }
+          </button>
         )
       ))}
     </div>

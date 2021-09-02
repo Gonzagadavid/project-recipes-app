@@ -1,28 +1,21 @@
 .CategoryContainer {
+  align-items: center;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
-  padding-left: 8px;
-  padding-right: 8px;
-  margin-top: 10px;
-}
-
-.categoryButtonAll {
-  background-color: #3a6ea5;
-  border: none;
-  border-radius: 5%;
-  color: #f0f7ee;
-  position: relative;
-  padding: 8px;
-  margin-top: 10px;
+  grid-gap: 5px;
+  gap: 5px;
+  justify-content: space-between;
+  margin: 2.5vw auto;
+  width: 95vw;
 }
 
 .categoryButton {
-  background-color: #3a6ea5;
-  border: none;
-  border-radius: 5%;
-  color: #f0f7ee;
-  position: relative;
-  padding: 8px;
+  background-color: transparent;
+  border: solid 0.5px #ee7505;
+  color: #ee7505;
+  border-radius: 5px;
+  min-width: 80px;
+  flex-grow: 1;
+  font-size: 20px;
 }
 

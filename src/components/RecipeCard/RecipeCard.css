@@ -2,6 +2,7 @@
   display: flex;
   flex-direction: column;
   margin: 10px;
+  align-items: center;
 }
 
 .recipeCard h3 {
@@ -16,5 +17,5 @@
 .recipeCard img {
   max-width:120px;
   max-height:120px;
-  border-radius: 20%;
+  border-radius: 50%;
 }

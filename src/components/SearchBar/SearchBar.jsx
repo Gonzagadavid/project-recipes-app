@@ -7,6 +7,7 @@ import { checkOneLetter, filterBebidas, filterComidas } from '../../functions';
 import fetchBebidas from '../../redux/fetchs/fetchsBebidas/fetchBebidas';
 import fetchComidas from '../../redux/fetchs/fetchsComidas/fetchComidas';
 import { Button, Input } from '../Forms';
+import './SearchBar.css';
 
 const SearchBar = () => {
   const [search, setSearch] = useState('');
@@ -37,24 +38,26 @@ const SearchBar = () => {
   };
 
   return (
-    <div>
+    <div className="search-bar">
       <Input
-        labelText="Buscar Receita"
+        placeholder="Buscar Receita"
         id="search-input"
         type="text"
         onChange={ ({ target: { value } }) => setSearch(value) }
         value={ search }
       />
-      {inputsRadios.map(({ labelText, id, params }) => (
-        <Input
-          labelText={ labelText }
-          id={ id }
-          type="radio"
-          name="filter"
-          onChange={ () => setFilter(params) }
-          key={ id }
-        />
-      ))}
+      <div className="filter-radios">
+        {inputsRadios.map(({ labelText, id, params }) => (
+          <Input
+            labelText={ labelText }
+            id={ id }
+            type="radio"
+            name="filter"
+            onChange={ () => setFilter(params) }
+            key={ id }
+          />
+        ))}
+      </div>
       <Button
         text="Buscar"
         id="exec-search-btn"

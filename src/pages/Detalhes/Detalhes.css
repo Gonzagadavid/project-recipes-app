@@ -1,4 +1,49 @@
+.detalhes .detalhes-img {
+  max-width:300px;
+  max-height:300px;
+  border-radius: 50%;
+  margin: 25px;
+}
+
+.detalhes h2, h3 {
+  color: #3a6ea5;
+  text-align: center;
+  font-family: holiday , sans-serif;
+  font-size: 50px;
+}
+
+.detalhes p {
+  text-align: center;
+  font-size: 25px;
+  color: rgb(105, 103, 103);
+  margin: 10px;
+}
+
 .btn-redirect {
   bottom: 0;
   position: fixed;
+}
+
+.detalhes button {
+  background-color: transparent;
+  border: none;
+}
+
+.detalhes  button[data-testid="start-recipe-btn"],
+.detalhes  button[data-testid="finish-recipe-btn"] {
+  background-color: #ee7505;
+  width: 100%;
+  font-size: 30px;
+  color: white;
+  padding: 10px;
+}
+
+.detalhes iframe {
+  width: 300px;
+  margin-left: 30px;
+}
+
+.detalhes li {
+  color: rgb(105, 103, 103);
+  font-size: 25px;
 }

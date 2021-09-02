@@ -29,7 +29,7 @@ const FavoriteButton = ({
   };
 
   return (
-    <button type="button" onClick={ handlerFavorite }>
+    <button type="button" onClick={ handlerFavorite } className="favorite-button">
       <img
         src={ favorite ? favoriteBlack : favoriteWhite }
         alt="favorite icon"

@@ -4,7 +4,7 @@
   flex-direction: row;
   height: 10vh;
   justify-content: space-around;
-  width: 100vw;
+  width: 100%;
   background-color: #ee7505;
 }
 
@@ -19,10 +19,10 @@
 }
 
 .header h1 {
-    color:  #f0f7ee; 
-    font-family: holiday , sans-serif;
-    font-size: 40px;
-  }
+  color:  #f0f7ee; 
+  font-family: holiday , sans-serif;
+  font-size: 40px;
+}
 
 .headerOutSearch h1 {
   color:  #f0f7ee; 

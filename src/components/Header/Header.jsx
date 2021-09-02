@@ -10,18 +10,20 @@ function Header({ title }) {
   const displaySearchBar = () => setShowSearchBar(!showSearchBar);
 
   return (
-    <header className="header">
-      <HeaderWithoutSearch />
-      <h1 data-testid="page-title">{ title }</h1>
-      <button type="button" onClick={ displaySearchBar }>
-        <img
-          data-testid="search-top-btn"
-          src={ SearchIcon }
-          alt="Ícone de buscar receita"
-        />
-      </button>
+    <div>
+      <header className="header">
+        <HeaderWithoutSearch />
+        <h1 data-testid="page-title">{ title }</h1>
+        <button type="button" onClick={ displaySearchBar }>
+          <img
+            data-testid="search-top-btn"
+            src={ SearchIcon }
+            alt="Ícone de buscar receita"
+          />
+        </button>
+      </header>
       { showSearchBar ? <SearchBar /> : '' }
-    </header>
+    </div>
   );
 }
 

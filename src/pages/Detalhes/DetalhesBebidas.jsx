@@ -34,11 +34,16 @@ const DetalhesBebidas = ({ match }) => {
   const { strDrinkThumb, strDrink, strAlcoholic, strInstructions, strCategory } = receita;
 
   return (
-    <div className="detalhesBebidas">
+    <div className="detalhes">
       {copied && <Message msg={ COPIED } />}
       <h2 data-testid="recipe-title">{strDrink}</h2>
       <p data-testid="recipe-category">{strAlcoholic}</p>
-      <img src={ strDrinkThumb } data-testid="recipe-photo" alt={ strDrink } />
+      <img
+        className="detalhes-img"
+        src={ strDrinkThumb }
+        data-testid="recipe-photo"
+        alt={ strDrink }
+      />
       <ShareButton
         ext={ `/bebidas/${id}` }
         id="share-btn"

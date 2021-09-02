@@ -1,28 +1,46 @@
-.Perfil button {
-    background-color: #3a6ea5;
-    border: none;
-    border-radius: 5px;
-    color: #f0f7ee;
-    font-size: 12px;
-    padding: 8px;
-    position: relative;
-    width: 80px;
-    margin-top: 0px;
-    margin-left: 50px;
-    margin-right: 50px;
-    margin-bottom: 20px;
+.Perfil {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 
-.Perfil h3 {
-    font-family: holiday , sans-serif;
-    font-size: 35px;
+.Perfil .button-container {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #ee7505;
-    color: #f0f7ee; 
-    padding: 15px;
-    margin-left: 30px;
-    margin-right: 30px;
+    justify-content: space-around;
+    margin: 40px 0 ;
+}
+
+.Perfil p { 
+    text-align: center;
+    margin: 30px 0 0; 
+    padding: 0;
+}
+
+.Perfil button {
+    background-color: transparent;
     border-radius: 5px;
+    border: solid 0.5px #3a6ea5 ;
+    color: #3a6ea5 ;
+    min-width: 80px;
+    font-size: 20px;
+    margin: 10px;
+    padding: 5px;
+}
+
+.Perfil .button-container button {
+    flex-grow: 1;
+    border: solid 0.5px #ee7505;
+    color: #ee7505;
+}
+
+
+
+.Perfil h3 {
+    font-size: 25px;
+    text-align: center;
+    background-color: #ee7505;
+    color: #f0f7ee;
+    border-radius: 5px;
+    margin: 0;
+    padding: 8px;
 }

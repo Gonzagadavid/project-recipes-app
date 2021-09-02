@@ -12,6 +12,7 @@ import ShareButton from '../ShareButton/ShareButton';
 import ButtonRedirect from '../ButtonRedirect/ButtonRedirect';
 import addItemArrayLocalStorage
   from '../../services/localStorage/addItemArrayLocalStorage';
+import '../../pages/Detalhes/Detalhes.css';
 
 function RecipeMain({ match }) {
   const { params: { id } } = match;
@@ -46,12 +47,13 @@ function RecipeMain({ match }) {
   };
 
   return (
-    <div>
+    <div className="detalhes">
       {copied && <Message msg={ COPIED } />}
       <img
         src={ recipe[`str${tipo}Thumb`] }
         alt="Prato do dia"
         data-testid="recipe-photo"
+        className="detalhes-img"
       />
       <h1 data-testid="recipe-title">
         { recipe[`str${tipo}`] }

@@ -7,6 +7,6 @@
   flex-direction: row;
   height: 70px;
   justify-content: space-around;
-  width: 100vw;
+  width: 100%;
   background-color: #ee7505;
 }
