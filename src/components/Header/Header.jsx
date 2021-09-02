@@ -3,14 +3,16 @@ import PropTypes from 'prop-types';
 import SearchBar from '../SearchBar/SearchBar';
 import SearchIcon from '../../images/searchIcon.svg';
 import HeaderWithoutSearch from './HeaderWithoutSearch';
+import './Header.css';
 
 function Header({ title }) {
   const [showSearchBar, setShowSearchBar] = useState(false);
   const displaySearchBar = () => setShowSearchBar(!showSearchBar);
 
   return (
-    <header>
+    <header className="header">
       <HeaderWithoutSearch />
+      <h1 data-testid="page-title">{ title }</h1>
       <button type="button" onClick={ displaySearchBar }>
         <img
           data-testid="search-top-btn"
@@ -18,7 +20,6 @@ function Header({ title }) {
           alt="Ícone de buscar receita"
         />
       </button>
-      <h1 data-testid="page-title">{ title }</h1>
       { showSearchBar ? <SearchBar /> : '' }
     </header>
   );

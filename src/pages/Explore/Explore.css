@@ -1,0 +1,42 @@
+.Explore button {
+    background-color: #3a6ea5;
+    border: none;
+    border-radius: 5px;
+    color: #f0f7ee;
+    font-size: 12px;
+    padding: 8px;
+    position: relative;
+    width: 80px;
+    margin-top: 20px;
+    margin-left: 60px;
+    margin-right: 20px;
+}
+
+.explorarComidas button {
+    background-color: #3a6ea5;
+    border: none;
+    border-radius: 5px;
+    color: #f0f7ee;
+    font-size: 12px;
+    padding: 8px;
+    position: relative;
+    width: 80px;
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.explorarBebidas button {
+    background-color: #3a6ea5;
+    border: none;
+    border-radius: 5px;
+    color: #f0f7ee;
+    font-size: 12px;
+    padding: 8px;
+    position: relative;
+    width: 80px;
+    margin-top: 20px;
+    margin-left: 60px;
+    margin-right: 20px;
+}
+

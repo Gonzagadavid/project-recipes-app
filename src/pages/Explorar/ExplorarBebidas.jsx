@@ -3,6 +3,7 @@ import { Link, useHistory } from 'react-router-dom';
 import { HeaderWithoutSearch, Footer } from '../../components';
 import { BEBIDAS_RANDOM } from '../../endPoints/bebidas';
 import fetchApi from '../../services/fetchApi';
+import '../Explore/Explore.css';
 
 const ExplorarBebidas = () => {
   const history = useHistory();
@@ -12,7 +13,7 @@ const ExplorarBebidas = () => {
   };
 
   return (
-    <div>
+    <div className="explorarBebidas">
       <HeaderWithoutSearch title="Explorar Bebidas" />
       <Link to="/explorar/bebidas/ingredientes">
         <button

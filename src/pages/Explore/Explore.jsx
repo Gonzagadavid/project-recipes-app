@@ -1,9 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Button, HeaderWithoutSearch, Footer } from '../../components';
+import './Explore.css';
 
 const Explore = () => (
-  <div>
+  <div className="Explore">
     <HeaderWithoutSearch title="Explorar" />
     <Link to="/explorar/comidas">
       <Button

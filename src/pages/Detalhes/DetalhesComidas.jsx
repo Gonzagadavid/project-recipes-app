@@ -36,7 +36,7 @@ const DetalhesComidas = ({ match }) => {
     strMealThumb, strMeal, strCategory, strInstructions, strYoutube, strArea,
   } = receita;
   return (
-    <div>
+    <div className="detalhesComidas">
       {copied && <Message msg={ COPIED } />}
       <h2 data-testid="recipe-title">{strMeal}</h2>
       <p data-testid="recipe-category">{strCategory}</p>

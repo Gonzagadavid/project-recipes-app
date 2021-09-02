@@ -1,0 +1,28 @@
+.CategoryContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding-left: 8px;
+  padding-right: 8px;
+  margin-top: 10px;
+}
+
+.categoryButtonAll {
+  background-color: #3a6ea5;
+  border: none;
+  border-radius: 5%;
+  color: #f0f7ee;
+  position: relative;
+  padding: 8px;
+  margin-top: 10px;
+}
+
+.categoryButton {
+  background-color: #3a6ea5;
+  border: none;
+  border-radius: 5%;
+  color: #f0f7ee;
+  position: relative;
+  padding: 8px;
+}
+

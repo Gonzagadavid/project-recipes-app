@@ -1,0 +1,28 @@
+.Perfil button {
+    background-color: #3a6ea5;
+    border: none;
+    border-radius: 5px;
+    color: #f0f7ee;
+    font-size: 12px;
+    padding: 8px;
+    position: relative;
+    width: 80px;
+    margin-top: 0px;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-bottom: 20px;
+}
+
+.Perfil h3 {
+    font-family: holiday , sans-serif;
+    font-size: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ee7505;
+    color: #f0f7ee; 
+    padding: 15px;
+    margin-left: 30px;
+    margin-right: 30px;
+    border-radius: 5px;
+}

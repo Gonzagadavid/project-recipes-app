@@ -2,4 +2,11 @@
   bottom: 0;
   left: 0;
   position: fixed;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  height: 70px;
+  justify-content: space-around;
+  width: 100vw;
+  background-color: #ee7505;
 }

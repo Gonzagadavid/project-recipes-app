@@ -1,8 +1,9 @@
 import { number, string } from 'prop-types';
 import React from 'react';
+import './RecipeCard.css';
 
 const RecipeCard = ({ recipeName, image, index, page }) => (
-  <div data-testid={ `${index}-${page}-card` }>
+  <div className="recipeCard" data-testid={ `${index}-${page}-card` }>
     <h3 data-testid={ `${index}-card-name` }>{recipeName}</h3>
     <img
       data-testid={ `${index}-card-img` }

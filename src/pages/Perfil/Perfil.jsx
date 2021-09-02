@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useHistory, Link } from 'react-router-dom';
 import { Footer, HeaderWithoutSearch } from '../../components';
 import getLocalStorage from '../../services/localStorage/getLocalStorage';
+import './Perfil.css';
 
 function Perfil() {
   const [email, setEmail] = useState('');
@@ -21,7 +22,7 @@ function Perfil() {
   };
 
   return (
-    <div>
+    <div className="Perfil">
       <HeaderWithoutSearch title="Perfil" />
       <h3 data-testid="profile-email">{email}</h3>
       <Link to="/receitas-feitas">

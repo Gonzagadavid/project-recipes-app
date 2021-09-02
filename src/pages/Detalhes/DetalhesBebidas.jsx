@@ -34,7 +34,7 @@ const DetalhesBebidas = ({ match }) => {
   const { strDrinkThumb, strDrink, strAlcoholic, strInstructions, strCategory } = receita;
 
   return (
-    <div>
+    <div className="detalhesBebidas">
       {copied && <Message msg={ COPIED } />}
       <h2 data-testid="recipe-title">{strDrink}</h2>
       <p data-testid="recipe-category">{strAlcoholic}</p>

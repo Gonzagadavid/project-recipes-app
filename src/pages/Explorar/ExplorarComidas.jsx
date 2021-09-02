@@ -3,6 +3,7 @@ import { Link, useHistory } from 'react-router-dom';
 import { HeaderWithoutSearch, Footer } from '../../components';
 import { COMIDAS_RAMDOM } from '../../endPoints/comidas';
 import fetchApi from '../../services/fetchApi';
+import '../Explore/Explore.css';
 
 function ExplorarComidas() {
   const history = useHistory();
@@ -12,7 +13,7 @@ function ExplorarComidas() {
   };
 
   return (
-    <div>
+    <div className="explorarComidas">
       <HeaderWithoutSearch title="Explorar Comidas" />
       <Link to="/explorar/comidas/ingredientes">
         <button
