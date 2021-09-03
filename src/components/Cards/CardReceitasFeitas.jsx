@@ -69,8 +69,8 @@ CardReceitasFeitas.propTypes = {
     alcoholicOrNot: PropTypes.string,
     area: PropTypes.string,
     id: PropTypes.string,
-    tags: PropTypes.string,
-    doneDate: PropTypes.number,
+    tags: PropTypes.arrayOf(PropTypes.string),
+    doneDate: PropTypes.string,
   }).isRequired,
   index: PropTypes.number.isRequired,
 };

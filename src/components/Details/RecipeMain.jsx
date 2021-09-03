@@ -39,7 +39,7 @@ function RecipeMain({ match }) {
       alcoholicOrNot: recipe.strAlcoholic || '',
       name: recipe[`str${tipo}`],
       image: recipe[`str${tipo}Thumb`],
-      doneDate: Date.now(),
+      doneDate: new Date(),
       tags: recipe.strTags ? recipe.strTags.split(',') : [],
     };
     addItemArrayLocalStorage('doneRecipes', saveDone);

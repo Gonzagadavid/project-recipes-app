@@ -11,7 +11,7 @@ const IngredientsList = ({ recipe }) => {
       <ul>
         {ingredients.map((ingredient, index) => (
           <li key={ index } data-testid={ `${index}-ingredient-name-and-measure` }>
-            {`${ingredient} - ${measures[index]}`}
+            {`${ingredient} ${measures[index] || ''}`}
           </li>
         ))}
       </ul>

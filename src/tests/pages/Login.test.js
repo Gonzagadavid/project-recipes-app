@@ -2,7 +2,6 @@ import { fireEvent, screen } from '@testing-library/react';
 import React from 'react';
 import { Login } from '../../pages';
 import renderWithRouterAndRedux from '../helpers/renderWithRouterAndRedux';
-import localStorageMock from '../mocks/localStorageMock';
 
 describe('verifica a renderização e o funcionamento do pagina login', () => {
   const ID_BUTTON = 'login-submit-btn';
@@ -12,8 +11,6 @@ describe('verifica a renderização e o funcionamento do pagina login', () => {
   const userEmailInvalido = 'patriciaDevserver.com';
   const senhaValida = '1234565';
   const senhaInvalida = '1234';
-
-  global.localStorage = jest.fn(localStorageMock);
 
   it('verifica a url da pagina', () => {
     const { history } = renderWithRouterAndRedux(<Login />);

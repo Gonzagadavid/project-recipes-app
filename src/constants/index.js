@@ -22,4 +22,4 @@ export const limitRecomendations = 6;
 
 export const INITIAL_PROGRESS_RECIPE = { cocktails: {}, meals: {} };
 
-export const ERROR_REQUISICAO = 'Ocorereu um erro, por favor tente mais tarde!';
+export const ERROR_REQUISICAO = 'Ocorreu um erro, por favor tente mais tarde!';

@@ -10,7 +10,6 @@ describe('verifica a renderizacao e o funcionamento do componente Select', () =>
     render(
       <Select
         labelText="selecione o teste"
-        name="select-test"
         id="id-test"
         onChange={ ({ target: { value } }) => { stateTest.key = value; } }
         options={ testOptions }
@@ -20,7 +19,6 @@ describe('verifica a renderizacao e o funcionamento do componente Select', () =>
     const options = screen.getAllByRole('option');
 
     expect(select).toBeInTheDocument();
-    expect(select).toHaveProperty('name', 'select-test');
     expect(select).toHaveProperty('id', 'id-test');
     expect(screen.getByTestId('id-test')).toBeInTheDocument();
     expect(options).toHaveLength(testOptions.length);

@@ -21,12 +21,13 @@ export default ButtonRedirect;
 
 ButtonRedirect.defaultProps = {
   disabled: false,
+  onClick: () => {},
 };
 
 ButtonRedirect.propTypes = {
   to: string.isRequired,
   btnText: string.isRequired,
   id: string.isRequired,
-  onClick: func.isRequired,
+  onClick: func,
   disabled: bool,
 };

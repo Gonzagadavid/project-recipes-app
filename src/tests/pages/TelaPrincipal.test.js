@@ -3,7 +3,8 @@ import React from 'react';
 import Bebidas from '../../pages/Principal/Bebidas';
 import Comidas from '../../pages/Principal/Comidas';
 import renderWithRouterAndRedux from '../helpers/renderWithRouterAndRedux';
-import fetchMock, {
+import fetchMock from '../mocks/fecthMock';
+import {
   mealCategories, drinkCategories, chickenMeals, cocktailDrinks, meals, drinks,
   oneDrink, oneMeal,
 } from '../mocks/respMoks';
@@ -28,7 +29,7 @@ describe('verifica a renderização e o funcionamento da tela principal', () => 
   it('verifica se contém 12 cards na pagina de comidas', async () => {
     renderWithRouterAndRedux(<Comidas />, '/comidas');
 
-    await waitFor(() => expect(global.fetch).toHaveBeenCalledTimes(1));
+    await waitFor(() => expect(global.fetch).toHaveBeenCalledTimes(callsNumber));
 
     const cards = screen.getAllByTestId(/card-name/i);
 
@@ -38,7 +39,7 @@ describe('verifica a renderização e o funcionamento da tela principal', () => 
   it('verifica se contém 12 cards na pagina de bebidas', async () => {
     renderWithRouterAndRedux(<Bebidas />, '/bebidas');
 
-    await waitFor(() => expect(global.fetch).toHaveBeenCalledTimes(1));
+    await waitFor(() => expect(global.fetch).toHaveBeenCalledTimes(callsNumber));
 
     const cards = screen.getAllByTestId(/card-name/i);
 
@@ -125,7 +126,7 @@ describe('verifica a renderização e o funcionamento da tela principal', () => 
 
   it('verifica redirecionamento caso ocorra apenas um resultado com comida', async () => {
     const { store, history } = renderWithRouterAndRedux(<Comidas />, '/comidas');
-    await waitFor(() => expect(global.fetch).toHaveBeenCalledTimes(1));
+    await waitFor(() => expect(global.fetch).toHaveBeenCalled());
     await waitFor(() => expect(global.fetch).toHaveBeenCalledTimes(callsNumber));
 
     const buscaIcon = screen.getByTestId(BUSCA_ICON);
@@ -152,7 +153,7 @@ describe('verifica a renderização e o funcionamento da tela principal', () => 
 
   it('verifica redirecionamento caso ocorra apenas um resultado com bebida', async () => {
     const { store, history } = renderWithRouterAndRedux(<Bebidas />, '/bebidas');
-    await waitFor(() => expect(global.fetch).toHaveBeenCalledTimes(1));
+    await waitFor(() => expect(global.fetch).toHaveBeenCalled());
     await waitFor(() => expect(global.fetch).toHaveBeenCalledTimes(callsNumber));
 
     const buscaIcon = screen.getByTestId(BUSCA_ICON);

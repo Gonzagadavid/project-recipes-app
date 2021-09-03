@@ -45,8 +45,14 @@ FavoriteButton.propTypes = {
   idRecipe: string.isRequired,
   type: string.isRequired,
   area: string.isRequired,
-  category: string.isRequired,
+  category: string,
   alcoholicOrNot: string.isRequired,
-  name: string.isRequired,
-  image: string.isRequired,
+  name: string,
+  image: string,
+};
+
+FavoriteButton.defaultProps = {
+  category: '',
+  name: '',
+  image: '',
 };

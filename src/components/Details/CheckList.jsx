@@ -1,4 +1,4 @@
-import { func, number, string } from 'prop-types';
+import { func, number, objectOf, oneOfType, string } from 'prop-types';
 import React, { useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
 import { INITIAL_PROGRESS_RECIPE } from '../../constants';
@@ -36,10 +36,9 @@ function CheckList(props) {
       {list.map((ingredient, index) => {
         const textstyle = !listProgress[index] ? 'none' : 'line-through';
         return (
-          <li key={ index }>
+          <li key={ index } data-testid={ `${index}-ingredient-step` }>
             <label
               htmlFor={ index }
-              data-testid={ `${index}-ingredient-step` }
             >
               <input
                 id={ index }
@@ -51,7 +50,7 @@ function CheckList(props) {
               <span
                 style={ { textDecoration: textstyle } }
               >
-                {`${ingredient}: ${sizeList[index]}`}
+                {`${ingredient} ${sizeList[index] || ''}`}
               </span>
             </label>
           </li>
@@ -64,7 +63,7 @@ function CheckList(props) {
 export default CheckList;
 
 CheckList.propTypes = {
-  recipesFavorite: string.isRequired,
-  id: number.isRequired,
+  recipesFavorite: oneOfType([objectOf(string), string]).isRequired,
+  id: oneOfType([number, string]).isRequired,
   finish: func.isRequired,
 };
