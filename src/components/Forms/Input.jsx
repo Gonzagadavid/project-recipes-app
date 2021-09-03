@@ -7,6 +7,7 @@ const Input = ({ labelText, id, name, type, onChange, value, placeholder }) => {
     <label htmlFor={ id }>
       { !checkLabel ? labelText : ''}
       <input
+        autoComplete="off"
         type={ type }
         name={ name }
         data-testid={ id }

@@ -2,17 +2,16 @@
   align-items: center;
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  height: 100%;
   justify-content: flex-start;
-  width: 100vw;
-  margin:0;
+  width: 100%;
 }
 
 .Login h2 {
   color: #ee7505;
   font-family: holiday , sans-serif;
-  font-size: 75px;
-  margin: 0 0 90px 0;
+  font-size: 65px;
+  margin-bottom: 90px;
   text-shadow: 5px 5px 5px #545454;
 }
 
