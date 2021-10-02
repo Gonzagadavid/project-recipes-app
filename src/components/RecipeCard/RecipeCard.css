@@ -1,0 +1,21 @@
+.recipeCard {
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+  align-items: center;
+}
+
+.recipeCard h3 {
+  color: #3a6ea5;
+  font-family: holiday , sans-serif;
+  font-size: 30px;
+  text-decoration: none;
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+.recipeCard img {
+  max-width:120px;
+  max-height:120px;
+  border-radius: 50%;
+}

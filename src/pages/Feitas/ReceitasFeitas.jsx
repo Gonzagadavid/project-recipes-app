@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { HeaderWithoutSearch, CardReceitasFeitas } from '../../components';
 import getLocalStorage from '../../services/localStorage/getLocalStorage';
+import './ReceitasFeitas.css';
 
 function ReceitasFeitas() {
   const [doneRecipes, setDoneRecipe] = useState([]);
@@ -27,29 +28,31 @@ function ReceitasFeitas() {
   }, []);
 
   return (
-    <div>
+    <div className="receitasFeitas">
       <HeaderWithoutSearch title="Receitas Feitas" />
-      <button
-        type="button"
-        data-testid="filter-by-all-btn"
-        onClick={ getRecipeDone }
-      >
-        All
-      </button>
-      <button
-        type="button"
-        data-testid="filter-by-food-btn"
-        onClick={ filterByMeal }
-      >
-        Food
-      </button>
-      <button
-        type="button"
-        data-testid="filter-by-drink-btn"
-        onClick={ filterByDrink }
-      >
-        Drink
-      </button>
+      <div className="button">
+        <button
+          type="button"
+          data-testid="filter-by-all-btn"
+          onClick={ getRecipeDone }
+        >
+          All
+        </button>
+        <button
+          type="button"
+          data-testid="filter-by-food-btn"
+          onClick={ filterByMeal }
+        >
+          Food
+        </button>
+        <button
+          type="button"
+          data-testid="filter-by-drink-btn"
+          onClick={ filterByDrink }
+        >
+          Drink
+        </button>
+      </div>
       { doneRecipes && doneRecipes.map((recipe, index) => (
         <CardReceitasFeitas
           key={ index }

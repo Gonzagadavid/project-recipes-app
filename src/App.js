@@ -5,7 +5,7 @@ import Routs from './routes/Routs';
 
 function App() {
   return (
-    <div>
+    <div className="App">
       <Alert />
       <Routs />
     </div>

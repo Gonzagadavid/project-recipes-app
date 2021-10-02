@@ -3,6 +3,7 @@ import { Link, useHistory } from 'react-router-dom';
 import { HeaderWithoutSearch, Footer } from '../../components';
 import { COMIDAS_RAMDOM } from '../../endPoints/comidas';
 import fetchApi from '../../services/fetchApi';
+import '../Explore/Explore.css';
 
 function ExplorarComidas() {
   const history = useHistory();
@@ -12,31 +13,38 @@ function ExplorarComidas() {
   };
 
   return (
-    <div>
+    <div className="Explore">
       <HeaderWithoutSearch title="Explorar Comidas" />
-      <Link to="/explorar/comidas/ingredientes">
+      <img
+        className="imagem-explore"
+        src="https://media.discordapp.net/attachments/879414910520533016/883100461626970112/telaExplorarFood.png"
+        alt="Gabi Guerra almoçando na oficina"
+      />
+      <div className="button-container">
+        <Link to="/explorar/comidas/ingredientes">
+          <button
+            data-testid="explore-by-ingredient"
+            type="button"
+          >
+            Por Ingredientes
+          </button>
+        </Link>
+        <Link to="/explorar/comidas/area">
+          <button
+            type="button"
+            data-testid="explore-by-area"
+          >
+            Por Local de Origem
+          </button>
+        </Link>
         <button
-          data-testid="explore-by-ingredient"
           type="button"
+          data-testid="explore-surprise"
+          onClick={ () => handlerClick() }
         >
-          Por Ingredientes
+          Me Surpreenda!
         </button>
-      </Link>
-      <Link to="/explorar/comidas/area">
-        <button
-          type="button"
-          data-testid="explore-by-area"
-        >
-          Por Local de Origem
-        </button>
-      </Link>
-      <button
-        type="button"
-        data-testid="explore-surprise"
-        onClick={ () => handlerClick() }
-      >
-        Me Surpreenda!
-      </button>
+      </div>
       <Footer />
     </div>
   );

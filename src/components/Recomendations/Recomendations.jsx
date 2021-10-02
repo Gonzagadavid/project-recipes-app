@@ -32,7 +32,11 @@ const Recomendations = () => {
           <h3 data-testid={ `${index}-recomendation-title` }>
             {recipe[`str${imgSrc}`] }
           </h3>
-          <img src={ recipe[`str${imgSrc}Thumb`] } alt={ recipe[`str${imgSrc}`] } />
+          <img
+            className="img-recipe"
+            src={ recipe[`str${imgSrc}Thumb`] }
+            alt={ recipe[`str${imgSrc}`] }
+          />
         </div>
       ))}
     </div>

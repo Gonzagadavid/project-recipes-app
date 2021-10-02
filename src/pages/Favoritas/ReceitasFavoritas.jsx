@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { FavoriteRecipeCard, HeaderWithoutSearch } from '../../components';
 import getLocalStorage from '../../services/localStorage/getLocalStorage';
+import './ReceitasFavoritas.css';
 
 function ReceitasFavoritas() {
   const [favoriteRecipe, setFavoriteRecipe] = useState([]);
@@ -34,7 +35,7 @@ function ReceitasFavoritas() {
   }, []);
 
   return (
-    <div>
+    <div className="receitasFavoritas">
       <HeaderWithoutSearch title="Receitas Favoritas" />
       <button
         type="button"

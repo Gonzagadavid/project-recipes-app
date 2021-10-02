@@ -10,6 +10,7 @@ import { COMIDAS_BY_CATEGORY, COMIDAS_BY_NAME, COMIDAS_CATEGORIES }
 import fetchBebidas from '../../redux/fetchs/fetchsBebidas/fetchBebidas';
 import fetchComidas from '../../redux/fetchs/fetchsComidas/fetchComidas';
 import { FIVE } from '../../constants';
+import './CategoryButton.css';
 
 function CategoryButton() {
   const [toggle, setToggle] = useState('');
@@ -37,8 +38,9 @@ function CategoryButton() {
   }, [fetchFilter, bebidasPath, dispatch, toggle]);
 
   return (
-    <div>
+    <div className="CategoryContainer">
       <button
+        className="categoryButton"
         type="button"
         data-testid="All-category-filter"
         onClick={ () => categoryAll() }
@@ -47,17 +49,16 @@ function CategoryButton() {
       </button>
       {category.length > 0 && category.map(({ strCategory }, index) => (
         index < FIVE && (
-          <label htmlFor={ `${strCategory}${index}` } key={ index }>
-            <button
-              type="button"
-              data-testid={ `${strCategory}-category-filter` }
-              name={ strCategory }
-              onClick={ () => (
-                strCategory === toggle ? categoryAll() : setToggle(strCategory)) }
-            >
-              { strCategory }
-            </button>
-          </label>
+          <button
+            className="categoryButton"
+            type="button"
+            data-testid={ `${strCategory}-category-filter` }
+            name={ strCategory }
+            onClick={ () => (
+              strCategory === toggle ? categoryAll() : setToggle(strCategory)) }
+          >
+            { strCategory }
+          </button>
         )
       ))}
     </div>

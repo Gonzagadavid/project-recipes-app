@@ -32,29 +32,32 @@ const Login = () => {
   };
 
   return (
-    <form className="Login">
-      <Input
-        labelText="Email:"
-        id="email-input"
-        type="email"
-        onChange={ ({ target: { value } }) => setEmail(value) }
-        value={ email }
-      />
-      <Input
-        labelText="Senha:"
-        id="password-input"
-        type="password"
-        onChange={ ({ target: { value } }) => setPassWord(value) }
-        value={ password }
-      />
-      <ButtonRedirect
-        to="/comidas"
-        btnText="Entrar"
-        id="login-submit-btn"
-        disabled={ verify }
-        onClick={ submitUser }
-      />
-    </form>
+    <div className="Login">
+      <h2>Tasty React</h2>
+      <form>
+        <Input
+          placeholder="Email"
+          id="email-input"
+          type="email"
+          onChange={ ({ target: { value } }) => setEmail(value) }
+          value={ email }
+        />
+        <Input
+          placeholder="Senha"
+          id="password-input"
+          type="password"
+          onChange={ ({ target: { value } }) => setPassWord(value) }
+          value={ password }
+        />
+        <ButtonRedirect
+          to="/comidas"
+          btnText="Entrar"
+          id="login-submit-btn"
+          disabled={ verify }
+          onClick={ submitUser }
+        />
+      </form>
+    </div>
   );
 };
 

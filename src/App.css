@@ -1,4 +1,4 @@
-.meals {
+/* .meals {
   align-items: center;
   background: #0fa36b;
   color: #464646;
@@ -13,7 +13,7 @@
 .rocksGlass {
   animation: shake 1s infinite ease;
   max-height: 80vh;
-}
+} */
 
 /*
 #iceLeft {
@@ -28,7 +28,7 @@
   transform-origin: 60px 78px;
 }
 */
-
+/* 
 .meals > .logo {
   animation: shake 1.5s infinite ease;
   color: aliceblue;
@@ -65,4 +65,30 @@
   100% {
     transform: rotate(-10deg);
   }
+} */
+
+body {
+  height: 100vh;
+  width: 100vw;
+  background-color: #f0f7ef;
+}
+
+/* #root {
+ 
+} */
+
+.App, #root {
+  height: 100%;
+  width: 100%;
+
+}
+
+@font-face {
+  font-family: holiday;
+  src: url('./fonts/bright_holiday/Brightholiday.ttf');
+}
+
+@font-face {
+  font-family: ohmyway;
+  src: url('./fonts/on_my_way/On\ My\ Way\ Free\ Version.ttf');
 }

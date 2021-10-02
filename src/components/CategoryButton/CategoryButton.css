@@ -1,0 +1,21 @@
+.CategoryContainer {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  grid-gap: 5px;
+  gap: 5px;
+  justify-content: space-between;
+  margin: 2.5vw auto;
+  width: 95vw;
+}
+
+.categoryButton {
+  background-color: transparent;
+  border: solid 0.5px #ee7505;
+  color: #ee7505;
+  border-radius: 5px;
+  min-width: 80px;
+  flex-grow: 1;
+  font-size: 20px;
+}
+

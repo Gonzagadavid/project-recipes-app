@@ -1,0 +1,28 @@
+.search-bar .filter-radios {
+  display: flex;
+  justify-content: space-around;
+}
+
+.search-bar .filter-radios label {
+  color: #3a6ea5 ;
+  margin: 5px 0 5px;
+}
+
+.search-bar input[data-testid="search-input"]{
+  width: 90%;
+  padding: 10px;
+  border: none;
+  font-size: 20px;
+  text-align: center;
+}
+
+.search-bar button {
+  display: block;
+  width: 100%;
+  border: none;
+  background-color: #ee7505;
+  padding: 5px;
+  font-size: 20px;
+  margin: 5px 0 5px;
+  color: white;
+}

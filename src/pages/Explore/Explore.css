@@ -1,0 +1,29 @@
+.Explore .button-container button{
+    background-color: transparent;
+    border: solid 0.5px #ee7505;
+    color: #ee7505;
+    border-radius: 5px;
+    flex-grow: 1;
+    font-size: 20px;
+    width: 100%;
+    margin: 20px 0 0;
+    padding: 10px 0;
+}
+
+.Explore .button-container a {
+    width: 100%;
+}
+
+.Explore .button-container {
+    align-items: center;
+    align-content: center;
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+}
+
+.Explore .imagem-explore {
+  border-radius: 50%;
+  background-position: cover;
+  margin: 20px 50px;
+}

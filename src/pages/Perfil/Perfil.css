@@ -1,0 +1,45 @@
+.Perfil {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.Perfil .button-container {
+    display: flex;
+    justify-content: space-around;
+    margin: 40px 0 ;
+}
+
+.Perfil p { 
+    text-align: center;
+    margin: 30px 0 0; 
+    padding: 0;
+}
+
+.Perfil button {
+    background-color: transparent;
+    border-radius: 5px;
+    border: solid 0.5px #3a6ea5 ;
+    color: #3a6ea5 ;
+    min-width: 80px;
+    font-size: 20px;
+    margin: 10px 0;
+    padding: 5px;
+}
+
+.Perfil .button-container button {
+    border: solid 0.5px #ee7505;
+    color: #ee7505;
+}
+
+
+
+.Perfil h3 {
+    font-size: 25px;
+    text-align: center;
+    background-color: #ee7505;
+    color: #f0f7ee;
+    border-radius: 5px;
+    margin: 0;
+    padding: 8px;
+}

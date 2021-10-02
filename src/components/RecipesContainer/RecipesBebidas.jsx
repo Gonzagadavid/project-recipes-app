@@ -6,6 +6,7 @@ import { BEBIDAS_BY_NAME } from '../../endPoints/bebidas';
 import { arrayLimit } from '../../functions';
 import fetchBebidas from '../../redux/fetchs/fetchsBebidas/fetchBebidas';
 import RecipeCard from '../RecipeCard/RecipeCard';
+import './RecipeContainer.css';
 
 const RecipesBebidas = () => {
   const recipesBebidas = useSelector((state) => state.reducerBebidas.bebidas);
@@ -18,7 +19,7 @@ const RecipesBebidas = () => {
 
   if (!recipesBebidas.length) return <p>Loading...</p>;
   return (
-    <div>
+    <div className="recipeContainer">
       {arrayLimit(recipesBebidas, limitRecipes).map(({
         idDrink, strDrink, strDrinkThumb,
       }, index) => (

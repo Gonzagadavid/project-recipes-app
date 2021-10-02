@@ -3,7 +3,7 @@ import CategoryButton from '../../components/CategoryButton/CategoryButton';
 import { RecipesComidas, Header, Footer } from '../../components';
 
 const Comidas = () => (
-  <div>
+  <div className="comidas">
     <Header title="Comidas" />
     <CategoryButton />
     <RecipesComidas />
